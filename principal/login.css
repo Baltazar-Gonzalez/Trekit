@@ -1,0 +1,26 @@
+.bg-nav{
+    background-color: #212b3f;
+    
+}
+
+.bg-heroes{
+    background-color: rgb(212, 228, 239);
+}
+.form-container{
+    width: 30%;
+}
+.terms{
+    font-size: .75em;
+    text-align: center;
+}
+.normal-link{
+    color: #198754;
+    text-decoration: none;
+}
+.normal-link:hover{
+    color: #198754;
+    text-decoration: underline;
+}
+footer{
+    position: absolute;
+}
