@@ -28,6 +28,12 @@ app.get('/user', (req, res) => {
     .catch(err => console.error(err))
 })
 
+app.post('/userverification', (req, res) => {
+  User.find({ $or: [{ email: req.body.user, passwordHash: req.body.password }, { username: req.body.user, passwordHash: req.body.password }] })
+    .then(users => res.send(users))
+    .catch(err => console.error(err))
+})
+
 app.post('/user', (req, res) => {
   console.log(req)
   const newUser = new User({
