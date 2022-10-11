@@ -5,9 +5,9 @@ import { faUser } from '@fortawesome/free-regular-svg-icons'
 import "./Main.css"
 
 const Main = () => {
-    const [state, setState] = useState({
+    const state = {
         username: "Balez"
-    })
+    }
     const [products, setProducts] = useState([
         {
             type: "Baldosa",
