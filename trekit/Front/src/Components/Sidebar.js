@@ -1,16 +1,21 @@
 import React from "react"
 import { Link,  NavLink } from "react-router-dom"
 import { MdOutlineCancel } from "react-icons/md"
-import { TooltipComponent } from "@syncfusion/ej2-react-popups"
 
 import { links } from "../data/dummy.js"
 import { useStateContext } from "../contexts/ContextProvider.js"
 
 function Sidebar(){
 
-    const {activeMenu, setActiveMenu} = useStateContext()
+    const {activeMenu, setActiveMenu, screenSize } = useStateContext()
 
-    const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg  text-white  text-md m-2';
+    const handleCloseSideBar = () => {
+        if (activeMenu !== undefined && screenSize <= 900) {
+          setActiveMenu(false);
+        }
+      };
+
+    const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg  text-white bg-green-400 text-md m-2' ;
     const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2';
 
     return (
@@ -18,10 +23,9 @@ function Sidebar(){
         {activeMenu && (
             <>
             <div className="flex justify-between items-center">
-                <Link to="/" className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
+                <Link to="/" onClick={handleCloseSideBar}  className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
                 <span>TreKIT</span>
                 </Link>
-                <TooltipComponent content="Menu" position="BottomCenter">
                 <button
                     type="button"
                     onClick={() => setActiveMenu(false)}
@@ -29,7 +33,6 @@ function Sidebar(){
                 >
                     <MdOutlineCancel />
                 </button>
-                </TooltipComponent>
             </div>
             <div className="mt-10 ">
                 {links.map((item) => (
@@ -39,9 +42,11 @@ function Sidebar(){
                     </p>
                     {item.links.map((link) => (
                     <NavLink
-                        to={`/${link.name}`}
+                        to={`/${link.link}`}
                         key={link.name}
                         className={({ isActive }) => (isActive ? activeLink : normalLink)}
+                        style={({ isActive }) => (isActive ? { backgroundColor: "rgb(94, 222, 148)" } : {})}
+                        onClick={handleCloseSideBar} 
                     >
                         {link.icon}
                         <span className="capitalize ">{link.name}</span>

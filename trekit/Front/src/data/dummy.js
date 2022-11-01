@@ -5,10 +5,10 @@ import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft
 import { BiColorFill } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
 import { RiContactsLine, RiStockLine } from 'react-icons/ri';
-import { MdOutlineSupervisorAccount } from 'react-icons/md';
+import { MdReportProblem } from 'react-icons/md';
 import { HiOutlineRefresh } from 'react-icons/hi';
 import { TiTick } from 'react-icons/ti';
-import { GiLouvrePyramid } from 'react-icons/gi';
+import { GiLouvrePyramid, GiBattery100, GiElectric } from 'react-icons/gi';
 import { GrLocation } from 'react-icons/gr';
 import avatar from './avatar.jpg';
 import avatar2 from './avatar2.jpg';
@@ -214,7 +214,7 @@ export const areaCustomSeries = [
     dataSource: areaChartData[0],
     xName: 'x',
     yName: 'y',
-    name: 'USA',
+    name: 'Zona Oeste',
     opacity: '0.8',
     type: 'SplineArea',
     width: '2',
@@ -242,17 +242,17 @@ export const areaCustomSeries = [
 
 export const barChartData = [
   [
-    { x: 'USA', y: 46 },
+    { x: 'Zona Oeste', y: 46 },
     { x: 'GBR', y: 27 },
     { x: 'CHN', y: 26 },
   ],
   [
-    { x: 'USA', y: 37 },
+    { x: 'Zona Oeste', y: 37 },
     { x: 'GBR', y: 23 },
     { x: 'CHN', y: 18 },
   ],
   [
-    { x: 'USA', y: 38 },
+    { x: 'Zona Oeste', y: 38 },
     { x: 'GBR', y: 17 },
     { x: 'CHN', y: 26 },
   ],
@@ -475,6 +475,7 @@ export const links = [
     links: [
       {
         name: 'graficos',
+        link: 'graficos',
         icon: <BsKanban />,
 
       },
@@ -486,10 +487,12 @@ export const links = [
     links: [
       {
         name: 'lista',
+        link: 'lista',
         icon: <AiOutlineShoppingCart />,
       },
       {
         name: 'adquiridos',
+        link: 'adquiridos',
         icon: <FiShoppingBag />,
       },
     ],
@@ -499,18 +502,22 @@ export const links = [
     links: [
       {
         name: 'tecnicos certificados',
+        link: 'tecnicos',
         icon: <IoMdContacts />,
       },
       {
         name: 'repuestos',
+        link: 'repuestos',
         icon: <AiOutlineCalendar />,
       },
       {
         name: 'capacitación',
+        link: 'capacitación',
         icon: <FiEdit />,
       },
       {
         name: 'contactanos',
+        link: 'contactanos',
         icon: <RiContactsLine />,
       },
     ],
@@ -575,38 +582,36 @@ export const chatData = [
 
 export const earningData = [
   {
-    icon: <MdOutlineSupervisorAccount />,
-    amount: '39,354',
-    percentage: '-4%',
-    title: 'Customers',
-    iconColor: '#03C9D7',
-    iconBg: '#E5FAFB',
+    icon: <MdReportProblem />,
+    amount: '0',
+    percentage: '-100%',
+    title: 'Problemas',
+    iconColor: 'rgb(228, 106, 118)',
+    iconBg: 'rgb(255, 244, 229)',
     pcColor: 'red-600',
   },
   {
     icon: <BsBoxSeam />,
-    amount: '4,396',
-    percentage: '+23%',
-    title: 'Products',
+    amount: '12',
+    title: 'Productos',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
     pcColor: 'green-600',
   },
   {
-    icon: <FiBarChart />,
-    amount: '423,39',
+    icon: <GiElectric />,
+    amount: '423.39 W',
     percentage: '+38%',
-    title: 'Sales',
-    iconColor: 'rgb(228, 106, 118)',
-    iconBg: 'rgb(255, 244, 229)',
-
+    title: 'Energia',
+    iconColor: '#03C9D7',
+    iconBg: '#E5FAFB',
     pcColor: 'green-600',
   },
   {
-    icon: <HiOutlineRefresh />,
-    amount: '39,354',
+    icon: <GiBattery100 />,
+    amount: '39,354 W',
     percentage: '-12%',
-    title: 'Refunds',
+    title: 'Almacenada',
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
     pcColor: 'red-600',
@@ -891,7 +896,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '40',
     Budget: '$2.4k',
-    Location: 'India',
+    Location: 'Capital Federal',
   },
   {
     CustomerID: 1002,
@@ -906,7 +911,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '11',
     Budget: '$3.9k',
-    Location: 'India',
+    Location: 'Capital Federal',
   },
   {
     CustomerID: 1003,
@@ -920,7 +925,7 @@ export const customersData = [
     StatusBg: '#FEC90F',
     Weeks: '19',
     Budget: '$24.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1004,
@@ -934,7 +939,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '34',
     Budget: '$16.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1005,
@@ -948,7 +953,7 @@ export const customersData = [
     StatusBg: 'red',
     Weeks: '34',
     Budget: '$16.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1006,
@@ -961,7 +966,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '40',
     Budget: '$2.4k',
-    Location: 'India',
+    Location: 'Capital Federal',
   },
   {
     CustomerID: 1007,
@@ -976,7 +981,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '11',
     Budget: '$3.9k',
-    Location: 'India',
+    Location: 'Capital Federal',
   },
   {
     CustomerID: 1008,
@@ -990,7 +995,7 @@ export const customersData = [
     StatusBg: '#FEC90F',
     Weeks: '19',
     Budget: '$24.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1009,
@@ -1004,7 +1009,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '34',
     Budget: '$16.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1010,
@@ -1018,7 +1023,7 @@ export const customersData = [
     StatusBg: 'red',
     Weeks: '34',
     Budget: '$16.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1011,
@@ -1031,7 +1036,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '40',
     Budget: '$2.4k',
-    Location: 'India',
+    Location: 'Capital Federal',
   },
   {
     CustomerID: 1012,
@@ -1046,7 +1051,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '11',
     Budget: '$3.9k',
-    Location: 'India',
+    Location: 'Capital Federal',
   },
   {
     CustomerID: 1013,
@@ -1060,7 +1065,7 @@ export const customersData = [
     StatusBg: '#FEC90F',
     Weeks: '19',
     Budget: '$24.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1014,
@@ -1074,7 +1079,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '34',
     Budget: '$16.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1015,
@@ -1088,7 +1093,7 @@ export const customersData = [
     StatusBg: 'red',
     Weeks: '34',
     Budget: '$16.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1016,
@@ -1101,7 +1106,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '40',
     Budget: '$2.4k',
-    Location: 'India',
+    Location: 'Capital Federal',
   },
   {
     CustomerID: 1017,
@@ -1116,7 +1121,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '11',
     Budget: '$3.9k',
-    Location: 'India',
+    Location: 'Capital Federal',
   },
   {
     CustomerID: 1018,
@@ -1130,7 +1135,7 @@ export const customersData = [
     StatusBg: '#FEC90F',
     Weeks: '19',
     Budget: '$24.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1019,
@@ -1144,7 +1149,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '34',
     Budget: '$16.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1020,
@@ -1158,7 +1163,7 @@ export const customersData = [
     StatusBg: 'red',
     Weeks: '34',
     Budget: '$16.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1021,
@@ -1171,7 +1176,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '40',
     Budget: '$2.4k',
-    Location: 'India',
+    Location: 'Capital Federal',
   },
   {
     CustomerID: 1022,
@@ -1186,7 +1191,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '11',
     Budget: '$3.9k',
-    Location: 'India',
+    Location: 'Capital Federal',
   },
   {
     CustomerID: 1023,
@@ -1200,7 +1205,7 @@ export const customersData = [
     StatusBg: '#FEC90F',
     Weeks: '19',
     Budget: '$24.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1024,
@@ -1214,7 +1219,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '34',
     Budget: '$16.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1025,
@@ -1228,7 +1233,7 @@ export const customersData = [
     StatusBg: 'red',
     Weeks: '34',
     Budget: '$16.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1026,
@@ -1241,7 +1246,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '40',
     Budget: '$2.4k',
-    Location: 'India',
+    Location: 'Capital Federal',
   },
   {
     CustomerID: 1027,
@@ -1256,7 +1261,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '11',
     Budget: '$3.9k',
-    Location: 'India',
+    Location: 'Capital Federal',
   },
   {
     CustomerID: 1028,
@@ -1270,7 +1275,7 @@ export const customersData = [
     StatusBg: '#FEC90F',
     Weeks: '19',
     Budget: '$24.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1029,
@@ -1284,7 +1289,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '34',
     Budget: '$16.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1030,
@@ -1298,7 +1303,7 @@ export const customersData = [
     StatusBg: 'red',
     Weeks: '34',
     Budget: '$16.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1031,
@@ -1311,7 +1316,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '40',
     Budget: '$2.4k',
-    Location: 'India',
+    Location: 'Capital Federal',
   },
   {
     CustomerID: 1032,
@@ -1326,7 +1331,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '11',
     Budget: '$3.9k',
-    Location: 'India',
+    Location: 'Capital Federal',
   },
   {
     CustomerID: 1033,
@@ -1340,7 +1345,7 @@ export const customersData = [
     StatusBg: '#FEC90F',
     Weeks: '19',
     Budget: '$24.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1034,
@@ -1354,7 +1359,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '34',
     Budget: '$16.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1035,
@@ -1368,7 +1373,7 @@ export const customersData = [
     StatusBg: 'red',
     Weeks: '34',
     Budget: '$16.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1036,
@@ -1381,7 +1386,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '40',
     Budget: '$2.4k',
-    Location: 'India',
+    Location: 'Capital Federal',
   },
   {
     CustomerID: 1037,
@@ -1396,7 +1401,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '11',
     Budget: '$3.9k',
-    Location: 'India',
+    Location: 'Capital Federal',
   },
   {
     CustomerID: 1038,
@@ -1410,7 +1415,7 @@ export const customersData = [
     StatusBg: '#FEC90F',
     Weeks: '19',
     Budget: '$24.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1039,
@@ -1423,7 +1428,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '34',
     Budget: '$16.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
   {
     CustomerID: 1040,
@@ -1436,7 +1441,7 @@ export const customersData = [
     StatusBg: 'red',
     Weeks: '34',
     Budget: '$16.5k',
-    Location: 'USA',
+    Location: 'Zona Oeste',
   },
 
 ];
@@ -1447,7 +1452,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar3,
@@ -1457,7 +1462,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -1467,7 +1472,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -1477,7 +1482,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1487,7 +1492,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1497,7 +1502,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1507,7 +1512,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1517,7 +1522,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar2,
@@ -1528,7 +1533,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -1538,7 +1543,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -1548,7 +1553,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1558,7 +1563,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1568,7 +1573,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1578,7 +1583,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1588,7 +1593,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar,
@@ -1598,7 +1603,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -1608,7 +1613,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -1618,7 +1623,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1628,7 +1633,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1638,7 +1643,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1648,7 +1653,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1658,7 +1663,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar2,
@@ -1669,7 +1674,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -1679,7 +1684,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -1689,7 +1694,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1699,7 +1704,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1709,7 +1714,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1719,7 +1724,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1729,7 +1734,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar2,
@@ -1740,7 +1745,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -1750,7 +1755,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -1760,7 +1765,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1770,7 +1775,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1780,7 +1785,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1790,7 +1795,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1800,7 +1805,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar2,
@@ -1811,7 +1816,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -1821,7 +1826,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -1831,7 +1836,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1841,7 +1846,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1851,7 +1856,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1861,7 +1866,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1871,7 +1876,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar2,
@@ -1882,7 +1887,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -1892,7 +1897,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -1902,7 +1907,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1912,7 +1917,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1922,7 +1927,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1932,7 +1937,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1942,7 +1947,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar2,
@@ -1953,7 +1958,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -1963,7 +1968,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -1973,7 +1978,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -1983,7 +1988,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -1993,7 +1998,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -2003,7 +2008,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -2013,7 +2018,7 @@ export const employeesData = [
     Name: 'Nancy Davolio',
     Title: 'Sales Representative',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar2,
@@ -2024,7 +2029,7 @@ export const employeesData = [
     Name: 'Nasimiyu Danai',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -2034,7 +2039,7 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
@@ -2044,7 +2049,7 @@ export const employeesData = [
     Name: 'Siegbert Gottfried',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -2054,7 +2059,7 @@ export const employeesData = [
     Name: 'Omar Darobe',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -2064,7 +2069,7 @@ export const employeesData = [
     Name: 'Penjani Inyene',
     Title: 'Marketing Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar,
@@ -2074,7 +2079,7 @@ export const employeesData = [
     Name: 'Miron Vitold',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Zona Oeste',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
@@ -2088,7 +2093,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: 'Fresh Tomato',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'pending',
     StatusBg: '#FB9678',
     ProductImage:
@@ -2143,7 +2148,7 @@ export const ordersData = [
     CustomerName: 'Omar Darobe',
     TotalAmount: 95.99,
     OrderItems: 'Makeup Lancome Rouge',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2154,7 +2159,7 @@ export const ordersData = [
     CustomerName: 'Lulia albu',
     TotalAmount: 17.99,
     OrderItems: 'Skincare',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'active',
     StatusBg: '#03C9D7',
     ProductImage:
@@ -2165,7 +2170,7 @@ export const ordersData = [
     CustomerName: 'Penjani',
     TotalAmount: 59.99,
     OrderItems: 'Headphone',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'complete',
     StatusBg: '#8BE78B',
     ProductImage:
@@ -2176,7 +2181,7 @@ export const ordersData = [
     CustomerName: 'Jie Yan',
     TotalAmount: 87.99,
     OrderItems: 'Shoes',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'pending',
     StatusBg: '#FB9678',
     ProductImage:
@@ -2187,7 +2192,7 @@ export const ordersData = [
     CustomerName: 'Danai',
     TotalAmount: 122.99,
     OrderItems: 'Watch',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2198,7 +2203,7 @@ export const ordersData = [
     CustomerName: 'Miron',
     TotalAmount: 87.99,
     OrderItems: 'Ice Cream',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'active',
     StatusBg: '#03C9D7',
     ProductImage:
@@ -2220,7 +2225,7 @@ export const ordersData = [
     CustomerName: 'Danai',
     TotalAmount: 122.99,
     OrderItems: 'Watch',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2232,7 +2237,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: 'Fresh Tomato',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'pending',
     StatusBg: '#FB9678',
     ProductImage:
@@ -2287,7 +2292,7 @@ export const ordersData = [
     CustomerName: 'Omar Darobe',
     TotalAmount: 95.99,
     OrderItems: 'Makeup Lancome Rouge',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2298,7 +2303,7 @@ export const ordersData = [
     CustomerName: 'Lulia albu',
     TotalAmount: 17.99,
     OrderItems: 'Skincare',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'active',
     StatusBg: '#03C9D7',
     ProductImage:
@@ -2309,7 +2314,7 @@ export const ordersData = [
     CustomerName: 'Penjani',
     TotalAmount: 59.99,
     OrderItems: 'Headphone',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'complete',
     StatusBg: '#8BE78B',
     ProductImage:
@@ -2320,7 +2325,7 @@ export const ordersData = [
     CustomerName: 'Jie Yan',
     TotalAmount: 87.99,
     OrderItems: 'Shoes',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'pending',
     StatusBg: '#FB9678',
     ProductImage:
@@ -2331,7 +2336,7 @@ export const ordersData = [
     CustomerName: 'Danai',
     TotalAmount: 122.99,
     OrderItems: 'Watch',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2342,7 +2347,7 @@ export const ordersData = [
     CustomerName: 'Miron',
     TotalAmount: 87.99,
     OrderItems: 'Ice Cream',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'active',
     StatusBg: '#03C9D7',
     ProductImage:
@@ -2364,7 +2369,7 @@ export const ordersData = [
     CustomerName: 'Danai',
     TotalAmount: 122.99,
     OrderItems: 'Watch',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2376,7 +2381,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: 'Fresh Tomato',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'pending',
     StatusBg: '#FB9678',
     ProductImage:
@@ -2431,7 +2436,7 @@ export const ordersData = [
     CustomerName: 'Omar Darobe',
     TotalAmount: 95.99,
     OrderItems: 'Makeup Lancome Rouge',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2442,7 +2447,7 @@ export const ordersData = [
     CustomerName: 'Lulia albu',
     TotalAmount: 17.99,
     OrderItems: 'Skincare',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'active',
     StatusBg: '#03C9D7',
     ProductImage:
@@ -2453,7 +2458,7 @@ export const ordersData = [
     CustomerName: 'Penjani',
     TotalAmount: 59.99,
     OrderItems: 'Headphone',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'complete',
     StatusBg: '#8BE78B',
     ProductImage:
@@ -2464,7 +2469,7 @@ export const ordersData = [
     CustomerName: 'Jie Yan',
     TotalAmount: 87.99,
     OrderItems: 'Shoes',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'pending',
     StatusBg: '#FB9678',
     ProductImage:
@@ -2475,7 +2480,7 @@ export const ordersData = [
     CustomerName: 'Danai',
     TotalAmount: 122.99,
     OrderItems: 'Watch',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2486,7 +2491,7 @@ export const ordersData = [
     CustomerName: 'Miron',
     TotalAmount: 87.99,
     OrderItems: 'Ice Cream',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'active',
     StatusBg: '#03C9D7',
     ProductImage:
@@ -2508,7 +2513,7 @@ export const ordersData = [
     CustomerName: 'Danai',
     TotalAmount: 122.99,
     OrderItems: 'Watch',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2520,7 +2525,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: 'Fresh Tomato',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'pending',
     StatusBg: '#FB9678',
     ProductImage:
@@ -2575,7 +2580,7 @@ export const ordersData = [
     CustomerName: 'Omar Darobe',
     TotalAmount: 95.99,
     OrderItems: 'Makeup Lancome Rouge',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2586,7 +2591,7 @@ export const ordersData = [
     CustomerName: 'Lulia albu',
     TotalAmount: 17.99,
     OrderItems: 'Skincare',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'active',
     StatusBg: '#03C9D7',
     ProductImage:
@@ -2597,7 +2602,7 @@ export const ordersData = [
     CustomerName: 'Penjani',
     TotalAmount: 59.99,
     OrderItems: 'Headphone',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'complete',
     StatusBg: '#8BE78B',
     ProductImage:
@@ -2608,7 +2613,7 @@ export const ordersData = [
     CustomerName: 'Jie Yan',
     TotalAmount: 87.99,
     OrderItems: 'Shoes',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'pending',
     StatusBg: '#FB9678',
     ProductImage:
@@ -2619,7 +2624,7 @@ export const ordersData = [
     CustomerName: 'Danai',
     TotalAmount: 122.99,
     OrderItems: 'Watch',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2630,7 +2635,7 @@ export const ordersData = [
     CustomerName: 'Miron',
     TotalAmount: 87.99,
     OrderItems: 'Ice Cream',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'active',
     StatusBg: '#03C9D7',
     ProductImage:
@@ -2652,7 +2657,7 @@ export const ordersData = [
     CustomerName: 'Danai',
     TotalAmount: 122.99,
     OrderItems: 'Watch',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2664,7 +2669,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: 'Fresh Tomato',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'pending',
     StatusBg: '#FB9678',
     ProductImage:
@@ -2719,7 +2724,7 @@ export const ordersData = [
     CustomerName: 'Omar Darobe',
     TotalAmount: 95.99,
     OrderItems: 'Makeup Lancome Rouge',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2730,7 +2735,7 @@ export const ordersData = [
     CustomerName: 'Lulia albu',
     TotalAmount: 17.99,
     OrderItems: 'Skincare',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'active',
     StatusBg: '#03C9D7',
     ProductImage:
@@ -2741,7 +2746,7 @@ export const ordersData = [
     CustomerName: 'Penjani',
     TotalAmount: 59.99,
     OrderItems: 'Headphone',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'complete',
     StatusBg: '#8BE78B',
     ProductImage:
@@ -2752,7 +2757,7 @@ export const ordersData = [
     CustomerName: 'Jie Yan',
     TotalAmount: 87.99,
     OrderItems: 'Shoes',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'pending',
     StatusBg: '#FB9678',
     ProductImage:
@@ -2763,7 +2768,7 @@ export const ordersData = [
     CustomerName: 'Danai',
     TotalAmount: 122.99,
     OrderItems: 'Watch',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2774,7 +2779,7 @@ export const ordersData = [
     CustomerName: 'Miron',
     TotalAmount: 87.99,
     OrderItems: 'Ice Cream',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'active',
     StatusBg: '#03C9D7',
     ProductImage:
@@ -2796,7 +2801,7 @@ export const ordersData = [
     CustomerName: 'Danai',
     TotalAmount: 122.99,
     OrderItems: 'Watch',
-    Location: 'USA',
+    Location: 'Zona Oeste',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2808,7 +2813,7 @@ export const scheduleData = [
   {
     Id: 1,
     Subject: 'Explosion of Betelgeuse Star',
-    Location: 'Space Center USA',
+    Location: 'Space Center Zona Oeste',
     StartTime: '2021-01-10T04:00:00.000Z',
     EndTime: '2021-01-10T05:30:00.000Z',
     CategoryColor: '#1aaa55',
@@ -2824,7 +2829,7 @@ export const scheduleData = [
   {
     Id: 3,
     Subject: 'Blue Moon Eclipse',
-    Location: 'Space Center USA',
+    Location: 'Space Center Zona Oeste',
     StartTime: '2021-01-12T04:00:00.000Z',
     EndTime: '2021-01-12T05:30:00.000Z',
     CategoryColor: '#7fa900',
@@ -2832,7 +2837,7 @@ export const scheduleData = [
   {
     Id: 4,
     Subject: 'Meteor Showers in 2021',
-    Location: 'Space Center USA',
+    Location: 'Space Center Zona Oeste',
     StartTime: '2021-01-13T07:30:00.000Z',
     EndTime: '2021-01-13T09:00:00.000Z',
     CategoryColor: '#ea7a57',
@@ -2840,7 +2845,7 @@ export const scheduleData = [
   {
     Id: 5,
     Subject: 'Milky Way as Melting pot',
-    Location: 'Space Center USA',
+    Location: 'Space Center Zona Oeste',
     StartTime: '2021-01-14T06:30:00.000Z',
     EndTime: '2021-01-14T08:30:00.000Z',
     CategoryColor: '#00bdae',
@@ -2864,7 +2869,7 @@ export const scheduleData = [
   {
     Id: 8,
     Subject: 'Life on Mars',
-    Location: 'Space Center USA',
+    Location: 'Space Center Zona Oeste',
     StartTime: '2021-01-16T03:30:00.000Z',
     EndTime: '2021-01-16T04:30:00.000Z',
     CategoryColor: '#357cd2',
@@ -2872,7 +2877,7 @@ export const scheduleData = [
   {
     Id: 9,
     Subject: 'Alien Civilization',
-    Location: 'Space Center USA',
+    Location: 'Space Center Zona Oeste',
     StartTime: '2021-01-18T05:30:00.000Z',
     EndTime: '2021-01-18T07:30:00.000Z',
     CategoryColor: '#7fa900',
@@ -2904,7 +2909,7 @@ export const scheduleData = [
   {
     Id: 13,
     Subject: 'Myths of Andromeda Galaxy',
-    Location: 'Space Center USA',
+    Location: 'Space Center Zona Oeste',
     StartTime: '2021-01-06T05:00:00.000Z',
     EndTime: '2021-01-06T07:00:00.000Z',
     CategoryColor: '#1aaa55',
@@ -2912,7 +2917,7 @@ export const scheduleData = [
   {
     Id: 14,
     Subject: 'Aliens vs Humans',
-    Location: 'Research Center of USA',
+    Location: 'Research Center of Zona Oeste',
     StartTime: '2021-01-05T04:30:00.000Z',
     EndTime: '2021-01-05T06:00:00.000Z',
     CategoryColor: '#357cd2',
@@ -2936,7 +2941,7 @@ export const scheduleData = [
   {
     Id: 17,
     Subject: 'The Cycle of Seasons',
-    Location: 'Research Center of USA',
+    Location: 'Research Center of Zona Oeste',
     StartTime: '2021-01-11T00:00:00.000Z',
     EndTime: '2021-01-11T02:00:00.000Z',
     CategoryColor: '#00bdae',
@@ -2944,7 +2949,7 @@ export const scheduleData = [
   {
     Id: 18,
     Subject: 'Space Galaxies and Planets',
-    Location: 'Space Center USA',
+    Location: 'Space Center Zona Oeste',
     StartTime: '2021-01-11T11:30:00.000Z',
     EndTime: '2021-01-11T13:00:00.000Z',
     CategoryColor: '#f57f17',
@@ -2960,7 +2965,7 @@ export const scheduleData = [
   {
     Id: 20,
     Subject: 'Alien Civilization',
-    Location: 'Space Center USA',
+    Location: 'Space Center Zona Oeste',
     StartTime: '2021-01-14T10:30:00.000Z',
     EndTime: '2021-01-14T12:30:00.000Z',
     CategoryColor: '#ea7a57',
@@ -2968,7 +2973,7 @@ export const scheduleData = [
   {
     Id: 21,
     Subject: 'Alien Civilization',
-    Location: 'Space Center USA',
+    Location: 'Space Center Zona Oeste',
     StartTime: '2021-01-10T08:30:00.000Z',
     EndTime: '2021-01-10T10:30:00.000Z',
     CategoryColor: '#ea7a57',
@@ -2976,7 +2981,7 @@ export const scheduleData = [
   {
     Id: 22,
     Subject: 'The Cycle of Seasons',
-    Location: 'Research Center of USA',
+    Location: 'Research Center of Zona Oeste',
     StartTime: '2021-01-12T09:00:00.000Z',
     EndTime: '2021-01-12T10:30:00.000Z',
     CategoryColor: '#00bdae',
@@ -3043,12 +3048,18 @@ export const dropdownData = [
   },
 ];
 export const SparklineAreaData = [
-  { x: 1, yval: 2 },
-  { x: 2, yval: 6 },
-  { x: 3, yval: 8 },
-  { x: 4, yval: 5 },
-  { x: 5, yval: 10 },
+  [3768, 3101, 2950, 8024, 3984, 6431, 7052],
+  [4012, 5112, 5931, 4232, 7007, 2781, 945],
+  ["Dom","Lun","Mar","Mie","Jue","Vie","Sab"],
+  ["rgb(255,255,255)"],
+  ["rgb(255,255,255)"],
 
+];
+export const SparklineAreaData2 = [
+  [3212, 4124, 2901, 3302, 1111, 4423, 2223, 1321, 3233, 3281, 2012, 3321, 3233, 1281, 9012, 3021, 3212, 4124, 2901, 3302, 1111, 4423, 2223, 1321, 3223, 3281, 2012],
+  [],
+  ["02/10", "03/10","04/10", "05/10","06/10","07/10","08/10","09/10","10/10","11/10","12/10","13/10","14/10","15/10","16/10","17/10","18/10","19/10","20/10","21/10","22/10","23/10","24/10","25/10","26/10","27/10","28/10"],
+  ["rgb(255,255,255)"],
 ];
 
 export const lineCustomSeries = [
@@ -3071,14 +3082,14 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[2],
     xName: 'x',
     yName: 'y',
-    name: 'India',
+    name: 'Capital Federal',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },
 
 ];
 
-export const pieChartData = [
+export const doughnutChartData = [
   { x: 'Labour', y: 18, text: '18%' },
   { x: 'Legal', y: 8, text: '8%' },
   { x: 'Production', y: 15, text: '15%' },

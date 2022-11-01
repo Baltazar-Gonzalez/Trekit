@@ -10,41 +10,26 @@ const Main = () => {
     }
     const [products, setProducts] = useState([
         {
-            type: "Baldosa",
-            id: "V5-32"
+            type: "Panel Solar Jinko Eagle 280W",
+            id: "D3-C2",
+            src: "./images/solarpanel.png"
         },
         {
-            type: "Panel solar",
-            id: "SS-X1"
+            type: "Generador Eolico Cilindrico 1500W-3000W",
+            id: "GF-13",
+            src: "./images/generadoreolico.png"
         },
         {
-            type: "Baldosa",
-            id: "FS-SS"
+            type: "Hidrogenerador Turbina Francis",
+            id: "F1-22",
+            src: "./images/turbina.png"
         },
         {
-            type: "Baldosa",
-            id: "D5-3D"
+            type: "Baldosa Cinetica Pavagen",
+            id: "AL-F4",
+            src: "./images/baldosa.png"
         },
-        {
-            type: "Panel solar",
-            id: "LS-XL"
-        },
-        {
-            type: "Baldosa",
-            id: "F1-33"
-        },
-        {
-            type: "Baldosa",
-            id: "B5-64"
-        },
-        {
-            type: "Panel solar",
-            id: "SS-46"
-        },
-        {
-            type: "Baldosa",
-            id: "FS-22"
-        },
+     
     ])
 
     useEffect(()=>{
@@ -53,21 +38,8 @@ const Main = () => {
 
     return (
         <>
-            <div className="navbar">
-                <div className="navbar-brand">
-                    <span>
-                        <a href="/">Tre<strong>kit</strong></a>
-                    </span>
-                </div>
-                <div className="navbar-user">
-                <FontAwesomeIcon icon={faUser} size="1x" style={{margin: " 0 10px"}} />
-                    <span>
-                        {state.username}
-                    </span>
-                </div>
-            </div>
             <div className="product-list">
-                {products.map(product => <Product id={product.id} type={product.type} />)}
+                {products.map(product => <Product id={product.id} src={product.src} type={product.type} />)}
             </div>
         </>
         );
